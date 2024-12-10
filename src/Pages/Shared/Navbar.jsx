@@ -46,7 +46,7 @@ const Navbar = () => {
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 space-x-2">
             { links }
           </ul>
         </div>
@@ -55,12 +55,12 @@ const Navbar = () => {
             user 
             ?
             <>
-              <button onClick={handleLogout} className="btn">Log out</button>
-              <img className="h-12 w-12 rounded-full border ring-offset-1" src={user.photoURL} alt="user photo" />
+              <button onClick={handleLogout} className="px-4 py-2 border hover:bg-gray-200 transition-all">Log out</button>
+              <img className="h-12 w-12 rounded-full border ring-offset-1 cursor-pointer" src={user.photoURL} alt="user photo" />
             </>
             : <>
-              <Link to='/register' className="btn">Register</Link>
-              <Link to='/signin' className="btn">Sign In</Link>
+              <Link to='/register' className="px-4 py-2 border hover:bg-gray-200 transition-all">Register</Link>
+              <Link to='/signin' className="px-4 py-2 border hover:bg-gray-200 transition-all">Sign In</Link>
             </>
             // user ? <><img className="h-12 w-12 rounded-full border ring-offset-1" src={user.photoURL} alt="user photo" /> </>: 
           }
